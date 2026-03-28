@@ -1,1 +1,39 @@
-
+Open a new Terminal in (VS Code IDE) and run the following commands:
+node -v
+npm -v
+-------------------------------
+Create a new directory called “DemoApp” for your project and navigate into it via Terminal:
+Create a sub directory called “server”:
+mkdir server
+cd server
+-------------------------------------------
+Initialize a new Node.js project:
+npm init -y
+npm install express cors dotenv mongoose nodemon
+--------------------------------------------
+Next, create a new JavaScript file named "server.js" under server directory.
+-------------------------------------------------
+Open package.json and modify the “scripts” and “main” as given below:-
+-------------------------------------------------------------------
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.3",
+    "nodemon": "^3.1.14"
+  }
+}
+-------------------------------------------
+Finally, Save all and Run Server Application
+npm run dev
