@@ -1,54 +1,202 @@
-Open a new Terminal in (VS Code IDE) and run the following commands:
-node -v
-npm -v
--------------------------------
-Create a new directory called “DemoApp” for your project and navigate into it via Terminal:
-Create a sub directory called “server”:
-mkdir server
-cd server
--------------------------------------------
-Initialize a new Node.js project:
-npm init -y
-npm install express cors dotenv mongoose nodemon
---------------------------------------------
-Next, create a new JavaScript file named "server.js" under server directory.
+Exercise 1 — Design a webpage using HTML 
 
-const express = require('express')
-const cors = require('cors')
-const app = express()
-app.use(cors())
-app.use(express.json())
-//Create API End Points (HTTP Request,Response)
-app.get('/',(req,res)=>{
-res.send('Welcome to Node JS Server')
-})
-//config PORT and Start Server
-const PORT = 8000
-app.listen(PORT, ()=>{
-console.log(`Server running on port ${PORT}`)
-})
--------------------------------------------------
-Open package.json and modify the “scripts” and “main” as given below:-
--------------------------------------------------------------------
-{
-  "name": "server",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "dev": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "mongoose": "^9.3.3",
-    "nodemon": "^3.1.14"
-  }
-}
--------------------------------------------
-Finally, Save all and Run Server Application
-npm run dev
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Webpage</title>
+</head>
+<body>
+  <h1>Welcome to My Webpage</h1>
+  <p>This is a simple webpage created using HTML.</p>
+  <h2>About Me</h2>
+  <p>I am a web development student learning HTML basics.</p>
+  <ul>
+    <li>Name: Student</li>
+    <li>Course: Web Development</li>
+    <li>Year: 2024</li>
+  </ul>
+</body>
+</html>
+------------------------------------
+
+Exercise 2 — Working with HTML5 Forms and Media Elements
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Forms and Media</title>
+</head>
+<body>
+  <h1>HTML5 Forms and Media Elements</h1>
+
+  <!-- Form -->
+  <h2>Registration Form</h2>
+  <form>
+    <label>Name: <input type="text" placeholder="Enter name"></label><br><br>
+    <label>Email: <input type="email" placeholder="Enter email"></label><br><br>
+    <label>Age: <input type="number" min="1" max="100"></label><br><br>
+    <label>DOB: <input type="date"></label><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Media -->
+  <h2>Media Elements</h2>
+  <img src="https://via.placeholder.com/200" alt="Sample Image"><br><br>
+
+  <video width="300" controls>
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video><br><br>
+
+  <audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+</body>
+</html>
+
+----------------------------------------------
+
+Exercise 3 — Design a Web Page using HTML and CSS
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML and CSS Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #555;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .content {
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>My Website</h1></header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="content">
+    <h2>Welcome!</h2>
+    <p>This page is designed using HTML and CSS.</p>
+  </div>
+  <footer><p>© 2024 My Website</p></footer>
+</body>
+</html>
+
+--------------------------------------------------------
+
+Exercise 4 — Sign-In and Sign-Up Page with Navigation Bar using CSS
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In / Sign Up</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f0f0f0; }
+    nav {
+      background-color: #333;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav a:hover { color: #f0a500; }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    h2 { text-align: center; }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    button:hover { background-color: #f0a500; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Sign In</a>
+    <a href="#">Sign Up</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Sign In -->
+    <div class="box">
+      <h2>Sign In</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Sign In</button>
+    </div>
+
+    <!-- Sign Up -->
+    <div class="box">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Sign Up</button>
+    </div>
+  </div>
+</body>
+</html>
